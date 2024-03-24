@@ -103,7 +103,8 @@ def get_dealerships(request, state="All"):
 # def get_dealer_reviews(request,dealer_id):
 # ...
 def get_dealer_reviews(request, dealer_id):
-    if (dealer_id):
+    # if dealer id has been provided
+    if(dealer_id):
         endpoint = "/fetchReviews/dealer/"+str(dealer_id)
         reviews = get_request(endpoint)
         for review_detail in reviews:
